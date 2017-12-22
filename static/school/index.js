@@ -21,9 +21,9 @@ function initVue() {
             },
             onSelectedCallback1(event) {
                 var self = this;
-                if(event.dbIdArray[0]==430 || event.dbIdArray[0]=284){
+                if(event.dbIdArray[0]==430 || event.dbIdArray[0]==284){
                     loadInitialModelV1(this.url[0],self.onSelectedCallback0);
-                }else if(event.dbIdArray[0]==268 || event.dbIdArray[0]=882){
+                }else if(event.dbIdArray[0]==268 || event.dbIdArray[0]==882){
                     loadInitialModelV1(this.url[1],self.onSelectedCallback0);
                 }
                 console.log('构件',event.dbIdArray[0]);
