@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学校演示</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- import Vue.js -->
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+    <link rel="stylesheet" href="/static/school/web3d/style.css" type="text/css">
+    <script src="/static/school/web3d/viewer3D.min.js"></script>
+    <script src="/static/school/web3d/three.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/school/LoadModel.js"></script>
+    <script src="https://open.ys7.com/sdk/js/1.1/ezuikit.js"></script>
+    <style type="text/css">
+        #viewer1{
+            width: 66.4vw;
+            height: 100vh;
+            position: relative;
+        }
+        #viewer2{
+            height: 45vh;
+            width: 33vw;
+            position: relative;
+            /*position: absolute;*/
+        }
+        #player{
+            width: 33vw;
+            height: 54vh;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <template>
+        <Row>
+            <i-col span="16" style="background:#cecbcb;">
+                <div id="viewer1"></div>
+            </i-col>
+            <i-col span="8">
+                <Row>
+                    <i-col span="24">
+                        <div id="viewer2"></div>
+                    </i-col>
+                    <i-col span="24">
+                        <video id="player" poster="/static/img/images/load.gif" autoplay>
+                            <source :src="videomobile" type="" />
+                            <source :src="videosrc" type="application/x-mpegURL" />
+                       </video>
+                    </i-col>
+                </Row>
+            </i-col>
+        </Row>
+    </template>
+</div>
+</body>
+    <script src="/static/school/index.js"></script>
+</html>
