@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""robot URL Configuration
+"""school URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -17,7 +17,7 @@ Including another URLconf
 """
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from robot import settings
+from school import settings
 from django.conf.urls.static import static
 from .views import index_view
 from django.views.generic.base import RedirectView
@@ -26,7 +26,5 @@ urlpatterns = [
     url(r'^$', RedirectView.as_view(url='/index/')),
     url(r'^index/$', index_view),
 ]
-urlpatterns += [
-    url(r'^api/', include('dialog.urls')),
-]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
