@@ -26,10 +26,24 @@
             position: relative;
             /*position: absolute;*/
         }
+        #viewer2>.adsk-viewing-viewer>.adsk-control{
+            display: none
+        }
         #player{
             width: 33vw;
             height: 54vh;
         }
+        .ivu-card-bordered{
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            z-index: 100;
+
+        }
+        .adsk-control-group{
+            background: rgb(54, 123, 113);
+        }
+
     </style>
 </head>
 <body>
@@ -37,14 +51,28 @@
     <template>
         <Row>
             <i-col span="16" style="background:#cecbcb;">
-                <div id="viewer1"></div>
+                <div id="viewer1">
+                    <Card>
+                        <p slot="title">精细模型</p>
+                        <p>[[build]]</p>
+                    </Card>
+                </div>
             </i-col>
             <i-col span="8">
                 <Row>
                     <i-col span="24">
-                        <div id="viewer2"></div>
+                        <div id="viewer2">
+                            <Card>
+                                <p slot="title">场地概览</p>
+                                <p>整体广场</p>
+                            </Card>
+                        </div>
                     </i-col>
                     <i-col span="24">
+                        <Card>
+                            <p slot="title">监控</p>
+                            <p>实时监控</p>
+                        </Card>
                         <video id="player" poster="/static/school/img/load.gif" autoplay>
                             <source :src="videomobile" type="" />
                             <source :src="videosrc" type="application/x-mpegURL" />
